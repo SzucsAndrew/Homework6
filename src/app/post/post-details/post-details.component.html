@@ -1,0 +1,21 @@
+<div *ngIf="!errorMessage && postData">
+    <table>
+        <tr>
+            <th>Id</th>
+            <td>{{postData.id}}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{postData.title}}</td>
+        </tr>
+        <tr>
+            <th>Body</th>
+            <td>{{postData.body}}</td>
+        </tr>
+        <tr>
+            <th>UserId</th>
+            <td>{{postData.userId}}</td>
+        </tr>
+    </table>
+</div>
+<p *ngIf="errorMessage" ngClass="error">Error: {{errorMessage}}</p>

@@ -2,7 +2,7 @@
     <ol *ngIf="!errorMessage && data">
         <li *ngFor="let post of data | slice:0:10">
             <a routerLink="/posts/{{post.id}}">{{post.title}}</a>
-            <button (click)="removePost(post)">Remove</button>
+            <button (click)="removePost(post.id)">Remove</button>
         </li>
     </ol>
     <p *ngClass="errorMessage" ngClass="error">Error: {{errorMessage}}</p>

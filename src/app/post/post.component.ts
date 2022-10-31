@@ -22,8 +22,7 @@ export class PostComponent implements OnInit {
     );
   }
 
-  removePost(postViewData : PostViewData){
-    const id = postViewData.id;
+  removePost(id : number){
     this.postServiceService.removePost(id).subscribe(
       () => this.data = this.data.filter(x => x.id !== id),
       (err) => this.errorMessage = err
